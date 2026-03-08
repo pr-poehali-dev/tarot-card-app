@@ -7,6 +7,7 @@ export default {
 		"./components/**/*.{ts,tsx}",
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
+			"./1772964041264321040.html"
 	],
 	prefix: "",
 	theme: {
@@ -63,6 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			fontFamily: {
+				display: ['Cormorant Garamond', 'serif'],
+				sc: ['Cormorant SC', 'serif'],
+				body: ['Golos Text', 'sans-serif'],
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -88,7 +94,11 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fade-up 0.6s ease-out forwards',
+				'float': 'float 4s ease-in-out infinite',
+				'shimmer': 'shimmer 2s ease-in-out infinite',
+				'pulse-gold': 'pulse-gold 2s ease-in-out infinite',
 			}
 		}
 	},
