@@ -5,6 +5,7 @@ export interface TarotCard {
   arcana: 'major' | 'minor';
   suit?: string;
   symbol: string;
+  image: string;
   keywords: string[];
   meaning: string;
   reversed: string;
@@ -15,6 +16,7 @@ export interface TarotCard {
 export const MAJOR_ARCANA: TarotCard[] = [
   {
     id: 0, name: "The Fool", nameRu: "Шут", arcana: "major", symbol: "🃏",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/d68a0971-5c14-4e24-8585-7d649e584a8d.jpg",
     keywords: ["Начало", "Свобода", "Доверие"],
     meaning: "Новый путь открывается перед вами. Доверьтесь интуиции и сделайте смелый шаг вперёд. Вселенная поддерживает вас в этом начинании.",
     reversed: "Необдуманные решения, наивность, риск без расчёта. Остановитесь и подумайте прежде чем действовать.",
@@ -23,6 +25,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 1, name: "The Magician", nameRu: "Маг", arcana: "major", symbol: "✨",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/f99f87b6-6e46-42dd-bf57-e1afafa2419a.jpg",
     keywords: ["Воля", "Мастерство", "Творение"],
     meaning: "У вас есть все необходимые инструменты для достижения цели. Сосредоточьте волю и действуйте. Момент для реализации замыслов.",
     reversed: "Манипуляции, нереализованный потенциал. Вы обладаете силой, но используете её не по назначению.",
@@ -31,6 +34,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 2, name: "The High Priestess", nameRu: "Верховная Жрица", arcana: "major", symbol: "🌙",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/88e79ac2-f81c-4494-bc4f-39529ac65b58.jpg",
     keywords: ["Интуиция", "Тайна", "Мудрость"],
     meaning: "Прислушайтесь к внутреннему голосу. Ответ, который вы ищете, уже внутри вас. Доверяйте своей интуиции.",
     reversed: "Игнорирование интуиции, тайны становятся раскрытыми. Пора обратить взор внутрь себя.",
@@ -39,6 +43,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 3, name: "The Empress", nameRu: "Императрица", arcana: "major", symbol: "🌸",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/00615d92-11b8-4639-a2d0-b532970f9934.jpg",
     keywords: ["Изобилие", "Красота", "Природа"],
     meaning: "Время процветания и творчества. Всё, что вы сеете, даст обильные плоды. Наслаждайтесь красотой мира вокруг.",
     reversed: "Творческий блок, зависимость от одобрения. Найдите гармонию с собой и природой.",
@@ -47,6 +52,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 4, name: "The Emperor", nameRu: "Император", arcana: "major", symbol: "👑",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/e66ef63c-c371-433b-8627-80fed440cd15.jpg",
     keywords: ["Власть", "Структура", "Авторитет"],
     meaning: "Время взять ответственность в свои руки. Создайте порядок и структуру. Ваша воля способна изменить ситуацию.",
     reversed: "Тирания, жёсткость, потеря контроля. Найдите баланс между властью и мягкостью.",
@@ -55,6 +61,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 5, name: "The Hierophant", nameRu: "Иерофант", arcana: "major", symbol: "⚜️",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/8fa627b5-9c22-415d-8738-8dd785359783.jpg",
     keywords: ["Традиция", "Духовность", "Наставник"],
     meaning: "Обратитесь к традиционным ценностям и мудрости. Возможно, вам нужен наставник или учитель на этом пути.",
     reversed: "Догматизм, отказ от традиций. Найдите свой уникальный духовный путь.",
@@ -63,6 +70,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 6, name: "The Lovers", nameRu: "Влюблённые", arcana: "major", symbol: "💕",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/009c132f-fa8d-4395-b5df-633bf7cfca40.jpg",
     keywords: ["Любовь", "Выбор", "Союз"],
     meaning: "Важный выбор предстоит вам. Следуйте сердцу. Союз и единство — вот что принесёт гармонию.",
     reversed: "Конфликт ценностей, неверный выбор, дисгармония в отношениях.",
@@ -71,6 +79,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 7, name: "The Chariot", nameRu: "Колесница", arcana: "major", symbol: "⚡",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/cc676469-a3a4-4eb1-9361-4da2e5ae3d12.jpg",
     keywords: ["Победа", "Воля", "Движение"],
     meaning: "Вы на пути к победе. Сохраняйте фокус и контролируйте противоположные силы внутри себя. Успех достижим.",
     reversed: "Потеря контроля, поражение, рассеянность. Вернитесь к своей цели.",
@@ -79,6 +88,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 8, name: "Strength", nameRu: "Сила", arcana: "major", symbol: "🦁",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/3de95148-c676-462f-a0a0-d2b1ebfdee45.jpg",
     keywords: ["Мужество", "Терпение", "Внутренняя сила"],
     meaning: "Ваша истинная сила — в мягкости и терпении. Укротите своих внутренних зверей с любовью, а не силой.",
     reversed: "Слабость воли, страх, агрессия. Обратитесь к своей внутренней силе.",
@@ -87,6 +97,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 9, name: "The Hermit", nameRu: "Отшельник", arcana: "major", symbol: "🕯️",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/f82ee4b0-3b1b-4446-ae14-fb7a3ce285dc.jpg",
     keywords: ["Уединение", "Поиск", "Свет"],
     meaning: "Время уединения и внутреннего поиска. Отдалитесь от шума мира и найдите свой внутренний свет.",
     reversed: "Изоляция, отказ от помощи, одиночество. Позвольте свету других освещать ваш путь.",
@@ -95,6 +106,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 10, name: "Wheel of Fortune", nameRu: "Колесо Фортуны", arcana: "major", symbol: "☸️",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/4f4fe95c-ace7-4ed8-893f-8a7480c26975.jpg",
     keywords: ["Судьба", "Циклы", "Удача"],
     meaning: "Колесо поворачивается в вашу пользу. Примите цикличность жизни. Это момент удачи и перемен.",
     reversed: "Неудача, сопротивление переменам. Колесо всегда вращается — будьте готовы.",
@@ -103,6 +115,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 11, name: "Justice", nameRu: "Справедливость", arcana: "major", symbol: "⚖️",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/fb855b29-6642-4fe4-8ded-c31049c6f2b2.jpg",
     keywords: ["Справедливость", "Баланс", "Истина"],
     meaning: "Справедливость восторжествует. Ваши действия вернутся к вам. Будьте честны с собой и другими.",
     reversed: "Несправедливость, дисбаланс, ложь. Время восстановить равновесие.",
@@ -111,6 +124,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 12, name: "The Hanged Man", nameRu: "Повешенный", arcana: "major", symbol: "🌀",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/1f89b302-1c37-4ea8-b07d-ddc100827450.jpg",
     keywords: ["Жертва", "Пауза", "Новый взгляд"],
     meaning: "Пауза и отпускание необходимы. Посмотрите на ситуацию с другой стороны. Жертва приведёт к просветлению.",
     reversed: "Сопротивление, бессмысленные жертвы. Время для действий, а не ожидания.",
@@ -119,6 +133,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 13, name: "Death", nameRu: "Смерть", arcana: "major", symbol: "🌑",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/d3fa1adf-7b68-4227-95be-39882755a96d.jpg",
     keywords: ["Трансформация", "Конец", "Возрождение"],
     meaning: "Старое уходит, чтобы дать место новому. Это не конец, а трансформация. Примите перемены с открытым сердцем.",
     reversed: "Сопротивление переменам, застой. Отпустите то, что уже умерло.",
@@ -127,6 +142,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 14, name: "Temperance", nameRu: "Умеренность", arcana: "major", symbol: "🌊",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/39e984e8-571e-42ab-957a-a69d46ae4b56.jpg",
     keywords: ["Баланс", "Терпение", "Гармония"],
     meaning: "Найдите золотую середину. Смешайте противоположности в гармоничное целое. Терпение приносит плоды.",
     reversed: "Крайности, дисбаланс, нетерпение. Сбавьте темп и найдите центр.",
@@ -135,6 +151,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 15, name: "The Devil", nameRu: "Дьявол", arcana: "major", symbol: "🔗",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/48280bf4-4706-4af2-9153-ba1f0e2be03d.jpg",
     keywords: ["Оковы", "Искушение", "Материальность"],
     meaning: "Оковы, которые вас держат, — иллюзия. Вы можете освободиться в любой момент. Осознайте свои зависимости.",
     reversed: "Освобождение, осознание. Цепи спадают. Вы свободны.",
@@ -143,6 +160,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 16, name: "The Tower", nameRu: "Башня", arcana: "major", symbol: "⚡",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/7665a83d-a856-4de6-8659-0caa5eb88c23.jpg",
     keywords: ["Разрушение", "Откровение", "Хаос"],
     meaning: "Резкие перемены сметают старые структуры. Это болезненно, но необходимо. На руинах строится нечто лучшее.",
     reversed: "Избегание неизбежного, откладывание кризиса. Лучше встретить бурю сейчас.",
@@ -151,6 +169,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 17, name: "The Star", nameRu: "Звезда", arcana: "major", symbol: "⭐",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/9cfd5f61-504c-4800-81da-cc69a4dfea17.jpg",
     keywords: ["Надежда", "Вдохновение", "Исцеление"],
     meaning: "После бури приходит ясность. Звезда ведёт вас. Надейтесь и доверяйте — мир благоволит вам.",
     reversed: "Безнадёжность, потеря вдохновения. Ваша звезда никуда не ушла — поднимите взгляд.",
@@ -159,6 +178,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 18, name: "The Moon", nameRu: "Луна", arcana: "major", symbol: "🌕",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/6d4017ad-276b-4965-81eb-08b193c4cf5f.jpg",
     keywords: ["Иллюзия", "Страхи", "Подсознание"],
     meaning: "Путь через туман и страхи. Не всё то, чем кажется. Прислушайтесь к снам и подсознанию.",
     reversed: "Туман рассеивается, иллюзии исчезают. Вы видите реальность яснее.",
@@ -167,6 +187,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 19, name: "The Sun", nameRu: "Солнце", arcana: "major", symbol: "☀️",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/e5ebff5a-f63c-49d7-b957-81c1c5cd6028.jpg",
     keywords: ["Радость", "Успех", "Витальность"],
     meaning: "Время радости и успеха! Всё освещено. Живите полной жизнью и разделяйте своё счастье с другими.",
     reversed: "Временное омрачение, самонадеянность. Солнце всегда возвращается.",
@@ -175,6 +196,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 20, name: "Judgement", nameRu: "Суд", arcana: "major", symbol: "🎺",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/a9468e84-c98e-4db3-8942-d877d4a3c1bc.jpg",
     keywords: ["Пробуждение", "Призыв", "Трансформация"],
     meaning: "Высший призыв звучит для вас. Время пробуждения и трансформации. Ответьте на зов своей души.",
     reversed: "Самосуд, отказ от призыва. Простите себя и двигайтесь вперёд.",
@@ -183,6 +205,7 @@ export const MAJOR_ARCANA: TarotCard[] = [
   },
   {
     id: 21, name: "The World", nameRu: "Мир", arcana: "major", symbol: "🌍",
+    image: "https://cdn.poehali.dev/projects/7e0ec43f-97fd-4ffc-ad58-8ff0c6dd0b13/files/50f8b1a0-aa8e-4aa9-b56a-96aa253c6604.jpg",
     keywords: ["Завершение", "Интеграция", "Успех"],
     meaning: "Цикл завершён. Вы достигли того, к чему стремились. Примите эту победу и готовьтесь к новому циклу.",
     reversed: "Незавершённость, откладывание финала. Доведите начатое до конца.",

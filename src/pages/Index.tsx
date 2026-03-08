@@ -76,13 +76,24 @@ function TarotCardComponent({ card, revealed, reversed, onClick, small }: {
       }}
     >
       {revealed ? (
-        <div className="w-full h-full flex flex-col items-center justify-center p-3 text-center">
-          <div className={`${small ? "text-2xl" : "text-4xl"} mb-2`}>{card.symbol}</div>
-          <div className={`font-sc text-gold ${small ? "text-xs" : "text-sm"} leading-tight`}>{card.nameRu}</div>
-          {!small && <div className="text-xs text-muted-foreground mt-1 font-sc tracking-wider">{card.name}</div>}
+        <div className="w-full h-full relative">
+          <img
+            src={card.image}
+            alt={card.nameRu}
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(to top, hsl(260 40% 5% / 0.92) 0%, hsl(260 40% 5% / 0.15) 55%, transparent 100%)" }}
+          />
+          <div className="absolute bottom-0 left-0 right-0 p-2 text-center">
+            <div className={`font-sc text-gold drop-shadow-lg ${small ? "text-[10px]" : "text-xs"} leading-tight`}>
+              {card.nameRu}
+            </div>
+          </div>
           {!small && reversed && (
             <div className="absolute top-2 right-2">
-              <span className="text-xs bg-red-900/50 text-red-300 px-1 rounded font-sc">↕</span>
+              <span className="text-xs bg-red-900/70 text-red-300 px-1.5 py-0.5 rounded font-sc backdrop-blur-sm">↕</span>
             </div>
           )}
         </div>
@@ -321,11 +332,13 @@ function CatalogPage() {
         <div className="grid grid-cols-3 gap-3 mt-4">
           {MAJOR_ARCANA.map(card => (
             <button key={card.id} onClick={() => { setSelected(card); setActiveTab("meaning"); }}
-              className="rounded-xl border p-3 text-center transition-all"
-              style={{ background: "hsl(270 30% 8% / 0.8)", borderColor: "hsl(43 74% 66% / 0.15)" }}>
-              <div className="text-3xl mb-1">{card.symbol}</div>
-              <div className="text-xs font-sc text-gold leading-tight">{card.nameRu}</div>
-              <div className="text-xs text-muted-foreground mt-0.5">{card.id === 0 ? "0" : card.id}</div>
+              className="rounded-xl border overflow-hidden text-center transition-all tarot-card relative"
+              style={{ borderColor: "hsl(43 74% 66% / 0.2)", aspectRatio: "2/3" }}>
+              <img src={card.image} alt={card.nameRu} className="w-full h-full object-cover" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, hsl(260 40% 5% / 0.9) 0%, transparent 55%)" }} />
+              <div className="absolute bottom-0 left-0 right-0 p-1.5">
+                <div className="text-xs font-sc text-gold leading-tight">{card.nameRu}</div>
+              </div>
             </button>
           ))}
         </div>
@@ -335,10 +348,13 @@ function CatalogPage() {
             <Icon name="ChevronLeft" size={16} /> Все карты
           </button>
           <div className="flex gap-6 items-center mb-6">
-            <div className="rounded-xl border w-28 h-44 flex flex-col items-center justify-center flex-shrink-0"
-              style={{ background: "linear-gradient(135deg, hsl(270 40% 10%), hsl(240 30% 8%))", borderColor: "hsl(43 74% 66% / 0.35)" }}>
-              <span className="text-5xl">{selected.symbol}</span>
-              <span className="font-sc text-gold text-sm mt-2">{selected.nameRu}</span>
+            <div className="rounded-xl border w-28 h-44 overflow-hidden flex-shrink-0 relative"
+              style={{ borderColor: "hsl(43 74% 66% / 0.35)" }}>
+              <img src={selected.image} alt={selected.nameRu} className="w-full h-full object-cover" />
+              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, hsl(260 40% 5% / 0.7) 0%, transparent 60%)" }} />
+              <div className="absolute bottom-0 left-0 right-0 p-2 text-center">
+                <span className="font-sc text-gold text-xs">{selected.nameRu}</span>
+              </div>
             </div>
             <div className="flex-1">
               <div className="font-display text-2xl text-gold">{selected.nameRu}</div>
